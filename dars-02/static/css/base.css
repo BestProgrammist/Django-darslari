@@ -1,3 +1,6 @@
 header h1 a {
-    color: green;
+    color: rgb(128, 0, 85);
+}
+footer h2 a {
+    color: rgb(255, 0, 98);
 }
