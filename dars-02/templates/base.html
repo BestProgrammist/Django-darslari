@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ko'ksoy mfy raisi haqida</title>
+    <title>Birinchi Portfolio</title>
     <link rel="stylesheet" href="{% static 'css/base.css'%}">
 </head>
 <body>
-    <header>
-        <h1><a href="{% url 'home' %}">Eshmatov Charshami Isamiddinovich</a></h1>
+    <header class="main-header">
+        <h1 class="header"><a href="{% url 'home' %}">Isomiddinov Rustam Chorshami o'g'li</a></h1>
+        <h2 class="header"><a href="{% url 'post_create' %}">+ Yangi post</a></h2>
     </header>
-<div>
+{% if user.is_authenticated %}
+    <h2>Xush kelibsiz, {{user.username}}</h2>
+    <p><a href="{% url 'logout' %}">Chiqib keish</a></p>
+{% else %}
+    <p><a href="{% url 'login' %}">Saytga kirish</a></p>
+    <p><a href="{% url 'signup' %}">Ro'yxatdan o'tish</a></p>
+{% endif %}
+<div class="contents">
     {% block content %}
     {% endblock content %}
 </div>
-    <footer>
-        <h2><a href="{% url 'post_create' %}">Yangi post</a></h2>
-    </footer>
 </body>
 </html>
