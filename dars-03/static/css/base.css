@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+    background-color: blue;
+    padding: 30px;
+}
+header span a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+.basediv {
+    background-color: green;
+    padding: 30px;
+}
+div span a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+}

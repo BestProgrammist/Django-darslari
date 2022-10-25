@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Bosh sahifa{% endblock title %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <h3>{{ user.username }}!</h3>
+        <a href="{% url 'update' %}">Kalit so'zni o'zgartirish</a> |
+        <a href="{% url 'logout' %}">Chiqish</a>
+    {% else %}
+        <h3>Siz ro'yxatdan o'tmagansiz</h3>
+        <a href="{% url 'login' %}">Kirish</a> |
+        <a href="{% url 'signup' %}">Ro'yxatdan o'tish</a>
+    {% endif %}
+{% endblock content %}

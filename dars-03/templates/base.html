@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qarshi lokomotiv deposi</title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+</head>
+<body>
+    <header>
+        <span><a href="{% url 'home' %}">O'zb</a></span>
+        <span><a href="{% url 'home' %}">Rus</a></span>
+        <span><a href="{% url 'home' %}">Eng</a></span>
+    </header>
+
+    <div class="basediv">
+        <span><a href="{% url 'home' %}">Bosh sahifa</a></span>
+        <span><a href="{% url 'home' %}">Rahbariyat</a></span>
+        <span><a href="{% url 'home' %}">Boshqaruv tizimi</a></span>
+        <span><a href="{% url 'home' %}">Xodimlar</a></span>
+        <span><a href="{% url 'home' %}">Yangiliklar</a></span>
+    </div>
+    <div class="maindiv">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+</html>
